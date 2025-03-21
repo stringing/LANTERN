@@ -1,6 +1,7 @@
 import yaml
 from repairer import gen_apr, re_gen
-from translator import initilize, translate, back_translate, decide
+from translator import initilize, translate, back_translate
+from analyzer import decide
 from evaluator import eval_apr, get_result
 from . import history
 import logging

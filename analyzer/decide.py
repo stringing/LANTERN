@@ -12,7 +12,7 @@ import datasets
 import concurrent
 import numpy as np
 from promptsource.templates import Template
-from translator.decision import TransDecision
+from analyzer.decision import TransDecision
 from middleware import retrieval
 from middleware import prompt
 
