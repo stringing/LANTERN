@@ -1,0 +1,35 @@
+base_dir: /root/my/data/xCodeEval/evaluation/tr_test
+dataset_path: /root/my/data/xCodeEval/apr
+dry_run: 0
+gen:
+  nattempt: 20
+  nsample: 1
+  temperature: 1.0
+hist_top_k: 15
+langs:
+- C
+- C#
+- C++
+- Go
+- Java
+- Javascript
+- Kotlin
+- PHP
+- Python
+- Ruby
+- Rust
+log_dir: logs
+name: cognitive trans-repair v3 lt
+num_proc: 17
+repair:
+  mode: vanilla
+result:
+  k: 20
+state:
+  action: re_gen
+  it: 0
+termination:
+  max_it: 11
+translate:
+  mode: cognitive
+unfixed_k: 0
