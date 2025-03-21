@@ -1,4 +1,4 @@
-base_dir: /root/my/data/xCodeEval/evaluation/tr_cognitive_lt
+base_dir: /root/my/data/xCodeEval/evaluation/tr_reasoning
 dataset_path: /root/my/data/xCodeEval/apr
 dry_run: 0
 gen:
@@ -31,5 +31,5 @@ state:
 termination:
   max_it: 11
 translate:
-  mode: cognitive
+  mode: reasoning
 unfixed_k: 0

@@ -192,7 +192,7 @@ def run(base_dir, num_proc, dry_run, it, mode, r_mode, config_path=""):
 
     decision = TransDecision(base_dir, it, config_path)
 
-    if mode in ["cognitive", "nohist", "nocot"]:
+    if mode in ["reasoning", "nohist", "nocot"]:
         build_target_db(base_dir, it)
 
 

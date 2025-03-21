@@ -172,7 +172,7 @@ class Coordinator:
 
             if self.__perform_action(
                 decide.run, 
-                self.__check_state("it", 0, "ge") and self.__check_state("action", "init") and self.__check_mode(["cognitive", "nohist", "nocot"], "in"), 
+                self.__check_state("it", 0, "ge") and self.__check_state("action", "init") and self.__check_mode(["reasoning", "nohist", "nocot"], "in"), 
                 this_it, 
                 "decide", 
                 "determining target language", 

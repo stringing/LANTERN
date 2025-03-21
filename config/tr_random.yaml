@@ -1,4 +1,4 @@
-base_dir: /root/my/data/xCodeEval/evaluation/tr_random_lt
+base_dir: /root/my/data/xCodeEval/evaluation/tr_random
 dataset_path: /root/my/data/xCodeEval/apr
 dry_run: 0
 gen:

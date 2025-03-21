@@ -48,12 +48,12 @@ class TransDecision:
     
     def decide_lang(self, sample=None, it=1, mode="greedy"):
         assert it > 0, "Invalid iteration!"
-        assert mode in ["greedy", "random", "cognitive", "nohist", "nocot", "diff"], "Invalid mdoe!"
+        assert mode in ["greedy", "random", "reasoning", "nohist", "nocot", "diff"], "Invalid mdoe!"
         if mode == "greedy":
             return self.sorted_pl[it - 1]
         if mode == "random":
             return self.get_random_lang(self.base_dir, sample["bug_code_uid"], self.LANGS)
-        if mode in ["cognitive", "nohist", "nocot"]:
+        if mode in ["reasoning", "nohist", "nocot"]:
             return self.get_decision(self.base_dir, self.it, sample["bug_code_uid"])
         if mode == "diff":
             return self.get_diff(self.base_dir)

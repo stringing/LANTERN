@@ -31,5 +31,5 @@ state:
 termination:
   max_it: 11
 translate:
-  mode: cognitive
+  mode: reasoning
 unfixed_k: 0
