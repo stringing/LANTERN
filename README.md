@@ -95,6 +95,18 @@ unfixed_k: 0
 ```
 
 # Pipeline Execution
+Decompress the dataset:
+```
+tar -xzvf dataset/apr.tar.gz
+```
+Set the base_dir, dataset_path, and other necessary configurations in the yaml config files.
+
+Set the API configuration of your LLM:
+```
+export API_KEY=your_api_key
+export API_BASE=your_api_base
+export MODEL_NAME=your_model_name
+```
 ### Greedy strategy
 ```
 python main.py --config config/tr_greedy.yaml
