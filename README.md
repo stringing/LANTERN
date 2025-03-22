@@ -3,7 +3,7 @@
 Artifacts of "Unlocking LLM Repair Capabilities in Low-Resource Programming Languages Through Cross-Language Translation and Multi-Agent Refinement".
 
 # Project Structure
-```
+```bash
 .
 ├── analyzer                    # reason about the optimal target language 
 │   ├── decide.py
