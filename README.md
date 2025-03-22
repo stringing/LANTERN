@@ -37,7 +37,7 @@ Install docker engine at [Docker-CE](https://docs.docker.com/engine/install/).
 
 ### Python Environment
 Install Python environment with necessary packages.
-```
+```bash
 conda create -n lantern python=3.9.2
 conda activate lantern
 cd LANTERN
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ### ExecEval
 Install the execution engine of xCodeEval at [ExecEval](https://github.com/ntunlp/execeval) and start ExecEval on specific port.
-```
+```bash
 git clone https://github.com/ntunlp/ExecEval
 cd ExecEval
 docker build . -t exec-eval:1.0
@@ -55,7 +55,7 @@ docker run -it -p 5000:5000 -e NUM_WORKERS=37 exec-eval:1.0
 
 # Pipeline Configuration
 Below is a template of the config file.
-```
+```yaml
 base_dir: /root/my/data/xCodeEval/evaluation/tr_reasoning   # the execution directory
 dataset_path: /root/my/data/xCodeEval/apr                   # the benchmark path
 dry_run: 0                      
@@ -96,38 +96,38 @@ unfixed_k: 0
 
 # Pipeline Execution
 Decompress the dataset:
-```
+```bash
 tar -xzvf dataset/apr.tar.gz
 ```
 Set the base_dir, dataset_path, and other necessary configurations in the yaml config files.
 
 Set the API configuration of your LLM:
-```
+```bash
 export API_KEY=your_api_key
 export API_BASE=your_api_base
 export MODEL_NAME=your_model_name
 ```
 ### Greedy strategy
-```
+```python
 python main.py --config config/tr_greedy.yaml
 ```
 
 ### Random strategy
-```
+```python
 python main.py --config config/tr_random.yaml
 ```
 
 ### Reasoning strategy
-```
+```python
 python main.py --config config/tr_reasoning.yaml
 ```
 
 ### w/o translation
-```
+```python
 python main.py --config config/tr_cmp.yaml
 ```
 
 ### w/o historical feedback
-```
+```python
 python main.py --config config/tr_cmp_nohist.yaml
 ```
