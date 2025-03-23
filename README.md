@@ -97,7 +97,7 @@ unfixed_k: 0
 # Pipeline Execution
 Decompress the dataset:
 ```bash
-tar -xzvf dataset/apr.tar.gz
+tar -xzvf dataset/apr.tar.gz -C dataset
 ```
 Set the base_dir, dataset_path, and other necessary configurations in the yaml config files.
 
