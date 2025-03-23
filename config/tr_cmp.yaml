@@ -1,5 +1,5 @@
 base_dir: /root/my/data/xCodeEval/evaluation/tr_cmp
-dataset_path: /root/my/data/xCodeEval/apr
+dataset_path: /root/LANTERN/dataset/apr
 dry_run: 0
 gen:
   nattempt: 20
