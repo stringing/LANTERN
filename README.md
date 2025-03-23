@@ -56,7 +56,7 @@ docker run -it -p 5000:5000 -e NUM_WORKERS=37 exec-eval:1.0
 # Pipeline Configuration
 Below is a template of the config file.
 ```yaml
-base_dir: /root/my/data/xCodeEval/evaluation/tr_reasoning   # the execution directory
+base_dir: /root/my/data/xCodeEval/evaluation/tr_reasoning   # the execution directory where all outcomes are produced
 dataset_path: /root/my/data/xCodeEval/apr                   # the benchmark path
 dry_run: 0                      
 gen:
