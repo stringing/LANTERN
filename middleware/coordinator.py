@@ -110,7 +110,7 @@ class Coordinator:
             0, 
             "gen_apr", 
             "generating patched code", 
-            self.__get_args("base_dir", "num_proc", "dry_run", "gen.nsample", "gen.nattempt", "gen.temperature")
+            self.__get_args("base_dir", "num_proc", "dry_run", "gen.nsample", "gen.nattempt", "gen.temperature", "dataset_path")
         ):
             self.__update_state(action="gen")
         

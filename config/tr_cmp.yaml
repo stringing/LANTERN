@@ -26,8 +26,8 @@ repair:
 result:
   k: 20
 state:
-  action: re_cal
-  it: 11
+  action: start
+  it: 0
 termination:
   max_it: 11
 translate:

@@ -10,7 +10,7 @@ import datasets
 import concurrent
 import numpy as np
 from promptsource.templates import Template
-from translator.decision import TransDecision
+from analyzer.decision import TransDecision
 from middleware.retrieval import build_target_db
 from middleware.history import get_last_incorrect_samples, cp_last_incorrect_samples
 from middleware import prompt

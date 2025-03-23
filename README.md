@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ```
 
 ### ExecEval
-Install the execution engine of xCodeEval at [ExecEval](https://github.com/ntunlp/execeval) and start ExecEval on specific port.
+Install the execution engine of xCodeEval at [ExecEval](https://github.com/ntunlp/execeval) and start the docker server.
 ```bash
 git clone https://github.com/ntunlp/ExecEval
 cd ExecEval

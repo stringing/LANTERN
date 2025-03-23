@@ -1,6 +1,8 @@
 import os
 import sys
-sys.path.append("/root/LANTERN")
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)  # Adjust if needed
+sys.path.append(project_root)
 import time
 import tqdm
 import json
@@ -165,13 +167,13 @@ def process_prompt(dt, temperature, nsample, output_dir, index, attempt, dry_run
             open(file_path, "w").write(f"{json.dumps(export_data, indent=4)}")
 
 
-def run(base_dir, num_proc, dry_run, nsample, nattempt, temperature):
+def run(base_dir, num_proc, dry_run, nsample, nattempt, temperature, dataset_path):
     
     output_dir = os.path.join(base_dir, "repair")
     if not os.path.exists(output_dir):
         os.makedirs(output_dir, exist_ok=True)
 
-    apr_dataset = datasets.load_from_disk("/root/my/data/xCodeEval/apr")
+    apr_dataset = datasets.load_from_disk(dataset_path)
     # temperature_list = np.linspace(0, 2, args.nsample)
     temperature_list = [temperature]
     with concurrent.futures.ProcessPoolExecutor(

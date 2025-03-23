@@ -1,6 +1,8 @@
 import sys
-sys.path.append("/root/TR")
 import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)  # Adjust if needed
+sys.path.append(project_root)
 import json
 from middleware import history
 import yaml

@@ -26,7 +26,7 @@ repair:
 result:
   k: 20
 state:
-  action: translate
+  action: start
   it: 0
 termination:
   max_it: 11

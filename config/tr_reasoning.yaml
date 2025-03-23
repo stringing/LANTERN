@@ -19,15 +19,15 @@ langs:
 - Ruby
 - Rust
 log_dir: logs
-name: cognitive trans-repair v3 lt
+name: reasoning trans-repair v3 lt
 num_proc: 17
 repair:
   mode: vanilla
 result:
   k: 20
 state:
-  action: save_history
-  it: 11
+  action: start
+  it: 0
 termination:
   max_it: 11
 translate:
