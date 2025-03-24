@@ -77,7 +77,7 @@ langs:                                                      # programming langua
 - Ruby
 - Rust
 log_dir: logs                                               # log directory
-name: cognitive trans-repair v3 lt                          # name of this run
+name: reasoning trans-repair v3 lt                          # name of this run
 num_proc: 17                                                # number of paralell processes
 repair:
   mode: vanilla                                             # repair mode [vanilla/cmp]
