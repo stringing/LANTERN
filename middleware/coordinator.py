@@ -186,7 +186,7 @@ class Coordinator:
                 this_it, 
                 "translate", 
                 "translating unfixed bugs", 
-                self.__get_args("base_dir", "num_proc", "dry_run", f"it:{this_it}", "translate.mode", f"r_mode:{self.__get_repair_mode()}", f"config_path:{self.config_path}")
+                self.__get_args("base_dir", "num_proc", "dry_run", f"it:{this_it}", "translate.mode", f"r_mode:{self.__get_repair_mode()}", "dataset_path", f"config_path:{self.config_path}")
             ):
                 self.__update_state(action="translate")
             
@@ -196,7 +196,7 @@ class Coordinator:
                 this_it, 
                 "re_gen", 
                 "generating patched code for unfixed bugs", 
-                self.__get_args("base_dir", "num_proc", "dry_run", "gen.nsample", "gen.nattempt", f"it:{this_it}", "repair.mode", "gen.temperature")
+                self.__get_args("base_dir", "num_proc", "dry_run", "gen.nsample", "gen.nattempt", f"it:{this_it}", "repair.mode", "gen.temperature", "dataset_path")
             ):
                 self.__update_state(action="re_gen")
             

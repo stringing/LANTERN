@@ -170,7 +170,7 @@ def process_prompt(dt, temperature, trans_dir, target_lang, index, r_mode, dry_r
             open(file_path, "w").write(f"{json.dumps(export_data, indent=4)}")
 
 
-def run(base_dir, num_proc, dry_run, it, mode, r_mode, config_path=""):
+def run(base_dir, num_proc, dry_run, it, mode, r_mode, dataset_path, config_path=""):
     iter_dir = os.path.join(base_dir, f"iter_{it}")
     unfixed_file = os.path.join(iter_dir, "unfixed.json")
     if os.path.exists(unfixed_file):
@@ -196,7 +196,7 @@ def run(base_dir, num_proc, dry_run, it, mode, r_mode, config_path=""):
         build_target_db(base_dir, it)
 
 
-    apr_dataset = datasets.load_from_disk("/root/my/data/xCodeEval/apr")
+    apr_dataset = datasets.load_from_disk(dataset_path)
 
     
     if r_mode == "ultimate2":

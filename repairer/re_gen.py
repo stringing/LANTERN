@@ -222,7 +222,7 @@ def load_json_files(dir):
     return json_files
 
 
-def run(base_dir, num_proc, dry_run, nsample, nattempt, it, mode, temperature):
+def run(base_dir, num_proc, dry_run, nsample, nattempt, it, mode, temperature, dataset_path):
     
     iter_dir = os.path.join(base_dir, f"iter_{it}")
     re_gen_dir = os.path.join(iter_dir, f"repair")
@@ -237,7 +237,7 @@ def run(base_dir, num_proc, dry_run, nsample, nattempt, it, mode, temperature):
         transed_dir = os.path.join(iter_dir, "trans")
         transed_dataset = load_json_files(transed_dir)
     elif mode == 'cmp':
-        apr_dataset = datasets.load_from_disk("/root/my/data/xCodeEval/apr")
+        apr_dataset = datasets.load_from_disk(dataset_path)
         transed_dataset = apr_dataset.filter(lambda x: x["bug_code_uid"] in unfixed_ids)
     # elif mode == 'ultimate2':
     #     transed_dataset = get_last_incorrect_samples_cr(base_dir, it, unfixed_ids)
