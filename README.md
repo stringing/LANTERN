@@ -1,8 +1,13 @@
 # Major Revision - Additional Information
 
-1. **Prompt Deisgn.** The description and ALL details of prompt design, which was supposed to be in **Section 4 Approach**, is now put in the additional document [prompt](https://anonymous.4open.science/r/LANTERN-67EE/prompt.md) due to page limit of the paper.
+## Prompt Design
 
-2. **Implementation Details** can be referred in the document [implementation](https://anonymous.4open.science/r/LANTERN-67EE/implementation.md).
+The description and ALL details of prompt design, which was supposed to be in **Section 4 Approach**, is now put in the additional document [prompt](https://anonymous.4open.science/r/LANTERN-67EE/prompt.md) due to page limit of the paper.
+
+## Implementation Details
+
+Implementation Details can be referred in the document [implementation](https://anonymous.4open.science/r/LANTERN-67EE/implementation.md).
+
 
 
 
