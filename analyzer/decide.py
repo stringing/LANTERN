@@ -82,7 +82,7 @@ def gen(prompt_text, temperature, nsample):
             c = openai.ChatCompletion.create(
                 model=model_name,
                 messages=[
-                    {"role": "system", "content": f"{prompt.PROMPTS['system']}"},
+                    {"role": "system", "content": f"{prompt.PROMPTS['system_decide']}" if 'claude' not in model_name else f"{prompt.PROMPTS['system_decide_cs']}"},
                     {"role": "user", "content": f"{prompt_text}"},
                 ],
                 temperature=temperature,

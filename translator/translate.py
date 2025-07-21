@@ -184,7 +184,7 @@ def run(base_dir, num_proc, dry_run, it, mode, r_mode, dataset_path, config_path
     if not os.path.exists(trans_dir):
         os.makedirs(trans_dir, exist_ok=True)
 
-    # for chatrepair
+    # for chatrepair / testfailure
     if mode == "copy":
         print('copying...')
         cp_last_incorrect_samples(base_dir, it, unfixed_ids)
@@ -199,7 +199,7 @@ def run(base_dir, num_proc, dry_run, it, mode, r_mode, dataset_path, config_path
     apr_dataset = datasets.load_from_disk(dataset_path)
 
     
-    if r_mode == "ultimate2":
+    if r_mode in["ultimate2", "testfailure"]:
         unfixed_dataset = get_last_incorrect_samples(base_dir, it, unfixed_ids)
     else:
         unfixed_dataset = apr_dataset.filter(lambda x: x['bug_code_uid'] in unfixed_ids)

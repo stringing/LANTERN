@@ -38,9 +38,45 @@ def retrieve(base_dir, uid, it):
             repair_hist += "\n\n"
     return repair_hist
 
+def retrieve_testfailure(base_dir, uid, it):
+    hist_file = os.path.join(base_dir, "history/repair_history.json")
+    repair_hist = ""
+    with open(hist_file, "r") as f:
+        hist = json.load(f)
+    for i in range(it):
+        if uid not in hist:
+            return repair_hist
+        lang = hist[uid][f"it_{i}"]["lang"]
+        patterns = hist[uid][f"it_{i}"]["patterns"]
+        max_data = patterns[list(patterns.keys())[0]]
+        for pattern, data in patterns.items():
+            if data["count"] > max_data["count"]:
+                max_data = data
+        code = max_data["bug_source_codes"][0]
+        test_eg = max_data["test_details"][0][0]
+        input = test_eg["input"]
+        if len(test_eg["output"]) == 0:
+            output = ""
+        else:
+            output = test_eg["output"][0]
+        exec_outcome = test_eg["exec_outcome"]
+        result = test_eg["result"]
+        if i == 0:
+            repair_hist = f"Here are the failed tests:\n"
+        repair_hist += f"- Input:\n{input}\n- Expected output:\n{output}\n- Actual output:\n{result}\n- Execution outcome:\n{exec_outcome}\n"
+        if i == it - 1:
+            repair_hist += "\n"
+        else:
+            repair_hist += "\n\n"
+    return repair_hist
+
 
 def add_hist(base_dir, dt, it):
     dt["repair_hist"] = retrieve(base_dir, dt["bug_code_uid"], it)
+    return dt
+
+def add_hist_testfailure(base_dir, dt, it):
+    dt["repair_hist"] = retrieve_testfailure(base_dir, dt["bug_code_uid"], it)
     return dt
 
 def construct_test(oai_id, last_tests, p=1.0):
@@ -86,7 +122,7 @@ def retrieve_current(base_dir, it, sample, last_tests):
     lang = sample["lang_cluster"]
     transed_code = sample["bug_source_code"]
     cur = "The fixed code is still not correct with the following failed tests.\n"
-    cur += construct_test(oai_id, last_tests, 1 / 11)
+    cur += construct_test(oai_id, last_tests, 1)
     cur += f"Provide the fixed {lang} code without any description or extra tokens.\n\nFixed source code:\n"
     return cur
 
@@ -106,6 +142,8 @@ def construct_conversation(base_dir, it, sample, last_repair, last_tests):
         msg_2 = {"role": "user", "content": retrieve_current(base_dir, it, sample, last_tests)}
         msg.append(res_1)
         msg.append(msg_2)
+    if len(msg) > 6: # context pruning
+        return [msg[0], msg[1], msg[6], msg[7]]
     return msg
 
 

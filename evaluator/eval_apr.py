@@ -143,7 +143,7 @@ def get_idx(file_name):
 
 
 def sanitize_code(code):
-    prefixes = ["csharp", "cpp", "go", "javascript", "kotlin", "php", "python", "ruby", "rust", "c", "java"]
+    prefixes = ["csharp", "cpp", "c++", "go", "javascript", "kotlin", "php", "python", "ruby", "rust", "c", "java"]
     FLAG = True
     while FLAG == True:
         FLAG = False
@@ -188,7 +188,7 @@ def process(args):
             code,
             fix_uts(unit_tests),
             task_id=src_uid,
-            stop_on_first_fail=False # False for check
+            stop_on_first_fail=True # False for check
         )
         # print(unit_test_results)
         # print(file, code, [e['exec_outcome'] for e in unit_test_results])
@@ -241,6 +241,8 @@ def run(base_dir, it, mode):
                     path_to_eval = os.path.join(path, "back_trans")
                 elif it and mode in ['check_original', 'check_trans']:
                     path_to_eval = os.path.join(path, 'trans')
+                elif mode == 'self_planning':
+                    path_to_eval = os.path.join(path, 'imp')
                 else:
                     path_to_eval = os.path.join(path, "repair")
                 files = sorted(os.listdir(path_to_eval))

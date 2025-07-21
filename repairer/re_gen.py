@@ -14,7 +14,7 @@ import datasets
 import concurrent
 import numpy as np
 from promptsource.templates import Template
-from middleware.repair_retrieval import add_hist, construct_conversation
+from middleware.repair_retrieval import add_hist, construct_conversation, add_hist_testfailure
 from middleware.history import load_last_repair, load_last_tests, get_last_incorrect_samples_cr
 from middleware import prompt
 
@@ -75,10 +75,13 @@ model_name = os.environ["MODEL_NAME"]
 
 def gen(prompt_text, temperature, nsample, mode, msg=None):
     cnt = 0
-    messages = [
-                {"role": "system", "content": f"{prompt.PROMPTS['system']}"},
-                {"role": "user", "content": f"{prompt_text}"},
-            ]
+    if mode == "ultimate2":
+        messages = msg
+    else:
+        messages = [
+                    {"role": "system", "content": f"{prompt.PROMPTS['system']}"},
+                    {"role": "user", "content": f"{prompt_text}"},
+                ]
     while True:
         if cnt == 999:
             return None
@@ -98,7 +101,11 @@ def gen(prompt_text, temperature, nsample, mode, msg=None):
             cnt += 1
             time.sleep(5)
             print(f"{e}")
-    c["prompt"] = prompt_text
+    
+    if mode == "ultimate2":
+        c["conversation"] = msg
+    else:
+        c["prompt"] = prompt_text
     return c
 
 def gen_request(prompt_text, temperature, nsample, mode, msg=None):
@@ -155,15 +162,17 @@ def gen_request(prompt_text, temperature, nsample, mode, msg=None):
 
 def process_prompt(dt, temperature, nsample, output_dir, index, attempt, mode, msg=None, dry_run=0):
     language = dt["lang_cluster"]
-    if mode == "ultimate2":
+    if mode in ["ultimate2", "testfailure"]:
         uid = dt["bug_code_uid"]
         file_path = os.path.join(output_dir, f"{index}_{uid}_{temperature}_{language}.json")
     else:
         file_path = os.path.join(output_dir, f"{index}_{attempt}_{temperature}_{language}.json")
     if mode == "ultimate":
-        s_prompt = f"You are an expert program repair system. You should carefully analyze problem descriptions and input/output specifications. You should reflect on previous failed repair attempts (the input, expected output, actual result and execution outcome of the test). You should make the analysis step by step. The output should be in json format."
+        # s_prompt = f"You are an expert program repair system. You should carefully analyze problem descriptions and input/output specifications. You should reflect on previous failed repair attempts (the input, expected output, actual result and execution outcome of the test). You should make the analysis step by step. The output should be in json format."
+        s_prompt = "You are an automated program repair tool."
     elif mode == "ultimate2":
-        s_prompt = "You are an expert program repair system. You should carefully analyze problem descriptions and input/output specifications. The buggy code that cannot be fixed will be translated to other programming languages for you to fix at each iteration. You should reflect on previous failed tests and provide the fixed code with the experience from historical failures."
+        # s_prompt = "You are an expert program repair system. You should carefully analyze problem descriptions and input/output specifications. The buggy code that cannot be fixed will be translated to other programming languages for you to fix at each iteration. You should reflect on previous failed tests and provide the fixed code with the experience from historical failures."
+        s_prompt = "you are an Automated Program Repair tool."
         if msg[0]["role"] != "system":
             system_msg = {"role": "system", "content": s_prompt}
             msg.insert(0, system_msg)
@@ -172,7 +181,10 @@ def process_prompt(dt, temperature, nsample, output_dir, index, attempt, mode, m
     if not os.path.exists(file_path):
         # dt["prob_desc_sample_inputs"] = json.loads(dt["prob_desc_sample_inputs"])
         # dt["prob_desc_sample_outputs"] = json.loads(dt["prob_desc_sample_outputs"])
-        lm_io = prompt.apr(dt)
+        if mode in ["testfailure", "ultimate"]:
+            lm_io = prompt.apr_hist(dt)
+        else:
+            lm_io = prompt.apr(dt)
         assert len(lm_io) == 2, f"{json.dumps(lm_io, indent=4)}"
         if dry_run:
             open(file_path, "w").write(f"{json.dumps(lm_io[0], indent=4)}")
@@ -257,13 +269,14 @@ def run(base_dir, num_proc, dry_run, nsample, nattempt, it, mode, temperature, d
             total=len(transed_dataset),
             desc=f"Preparing samples lang",
         ):
-            if mode == "ultimate":
-                dt = add_hist(base_dir, dt, it)
+            if mode in ["ultimate", "testfailure"]:
+                dt = add_hist_testfailure(base_dir, dt, it)
             msg = None
             if mode == "ultimate2":
                 msg = construct_conversation(base_dir, it, dt, last_repair, last_tests)
                 # with open("/root/TR/test/msg.txt", "a") as msg_file:
                 #     msg_file.write(str(msg))
+            if mode in ["ultimate2", "testfailure"]:
                 nattempt = 1
             for attempt in range(nattempt):
                 for temperature in temperature_list:

@@ -145,24 +145,57 @@ def init_cos_similarity(base_dir):
     return cos_path
 
 
+# def sanitize_code(code):
+#     prefixes = ["csharp", "cpp", "go", "javascript", "kotlin", "php", "python", "ruby", "rust", "c", "java", "json"]
+#     FLAG = True
+#     while FLAG == True:
+#         FLAG = False
+#         if code.startswith("```"):
+#             FLAG = True
+#             code = code.replace("```", "", 1)
+#         last_index = code.rfind("```")
+#         if last_index != -1:
+#             FLAG = True
+#             code = code[:last_index] + "" + code[last_index + len("```") :]
+#         for prefix in prefixes:
+#             if code.startswith(prefix):
+#                 FLAG = True
+#                 code = code.replace(prefix, "", 1)
+#                 break
+#     return code
+
 def sanitize_code(code):
     prefixes = ["csharp", "cpp", "go", "javascript", "kotlin", "php", "python", "ruby", "rust", "c", "java", "json"]
-    FLAG = True
-    while FLAG == True:
-        FLAG = False
-        if code.startswith("```"):
-            FLAG = True
-            code = code.replace("```", "", 1)
-        last_index = code.rfind("```")
-        if last_index != -1:
-            FLAG = True
-            code = code[:last_index] + "" + code[last_index + len("```") :]
-        for prefix in prefixes:
-            if code.startswith(prefix):
-                FLAG = True
-                code = code.replace(prefix, "", 1)
-                break
-    return code
+    
+    # Find the first occurrence of ```
+    start_idx = code.find("```")
+    if start_idx == -1:
+        return code  # No code block found
+    
+    # Extract everything from the first ``` onwards
+    code_block = code[start_idx:]
+    
+    # Remove the opening ```
+    code_block = code_block[3:]
+    
+    # Check if it starts with a language prefix and remove it
+    for prefix in prefixes:
+        if code_block.startswith(prefix):
+            code_block = code_block[len(prefix):]
+            break
+    
+    # Find the closing ```
+    end_idx = code_block.find("```")
+    if end_idx != -1:
+        code_block = code_block[:end_idx]
+    
+    code_block = code_block.strip()
+
+
+    # if not code_block.endswith('}'):
+    #     code_block += '}'
+    
+    return code_block
 
 
 def build_target_db(base_dir, it):
@@ -193,7 +226,28 @@ def build_target_db(base_dir, it):
                 
                 # Get sanitized code and parse as JSON
                 code = sanitize_code(res)
-                code_json = json.loads(code)
+
+                code = code.replace("\n", "") # claude 3.5 sometimes has this problem...
+
+                try:
+                    code_json = json.loads(code)
+                except json.JSONDecodeError as e:
+                    print(f"JSON parsing failed for {code_id}: {e}")
+                    print(f"Attempting to fix JSON...")
+                    
+                    # Try to fix common issues
+                    import re
+                    fixed_code = re.sub(r'(\d+)\s+([a-zA-Z]+)', r'"\1 \2"', code)
+                    
+                    try:
+                        code_json = json.loads(fixed_code)
+                        print(f"Successfully fixed JSON for {code_id}")
+                    except json.JSONDecodeError:
+                        with open('/root/output.txt', 'a') as op:
+                            op.write(code)
+                            op.write('-' * 30 + '\n')
+                        print(f"Could not fix JSON for {code_id}, skipping...")
+                        continue
                 
                 # Get target language and code ID
                 target_lang = code_json["Target Language"]
@@ -330,11 +384,25 @@ def retrieve_base(base_dir, it, bug_code_uid, top_k, initial_unfixed_ids, bug_pr
     return query_df, similar_bugs_df
 
 
+# def to_str(hist):
+#     """
+#     transform list ['a', 'b', 'c'] to string form '[a, b, c]'
+#     """
+#     hist_str = '[' + ', '.join(hist) + ']'
+#     return hist_str
 def to_str(hist):
     """
     transform list ['a', 'b', 'c'] to string form '[a, b, c]'
+    flattens nested lists
     """
-    hist_str = '[' + ', '.join(hist) + ']'
+    flattened = []
+    for item in hist:
+        if isinstance(item, list):
+            flattened.extend(item)  # Extract elements from the nested list
+        else:
+            flattened.append(item)  # Keep non-list items as they are
+    
+    hist_str = '[' + ', '.join(flattened) + ']'
     return hist_str
 
 

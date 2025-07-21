@@ -8,7 +8,190 @@ The description and ALL details of prompt design, which was supposed to be in **
 
 Implementation Details can be referred in the document [implementation](https://anonymous.4open.science/r/LANTERN-67EE/implementation.md).
 
+## Addtional Experiments
 
+### Real-world Generalizability
+
+#### 1. SWE-Bench Lite
+
+#### Prerequisite
+
+Install the SWE-Bench framework for evaluation:
+
+```
+cd baseline/SWE-bench
+pip install -e .
+```
+
+In *baseline/Agentless*:
+
+Install Agentless according to the document at [Agentless](https://github.com/OpenAutoCoder/Agentless/).
+
+Please download the repository structure in advance at [repo_structure](https://drive.google.com/file/d/15-4XjTmY48ystrsc_xcvtOkMs3Fx8RoW/view?usp=sharing) and prior generation from AGENTLESS for bug context extraction at [swe-bench-lite](https://github.com/OpenAutoCoder/Agentless/releases/download/v1.5.0/agentless_swebench_lite.zip).
+
+Unzip the compressed repository structure file in *baseline/Agentless*. 
+
+Export the structure location:
+
+```
+export PROJECT_FILE_LOC={xxx/Agentless/repo_structure/repo_structures}
+```
+
+Create a *results* folder in *baseline/Agentless*.
+
+Unzip the agentless_swebench_lite.zip in *results*.
+
+
+The final structures of them should be:
+
+```
+Agentless
+...repo_structure
+......repo_structures
+.........astropy__astropy-6938.json
+        ...
+...results
+......swe-bench-lite
+.........edit_location_individual
+        ...
+```
+
+
+Next, please set the OpenAI configurations in Agentless/script/api_key.sh.
+
+Then run the script to repair:
+
+```
+cd baseline/Agentless
+
+bash script/run_trans.sh
+
+```
+
+Finally, get the result:
+
+```
+python script/cmp_all.py ../SWE-bench
+```
+
+#### 2. Defects4J
+
+**ChatRepair:**
+
+```
+export API_KEY=your_api_key
+export API_BASE=your_api_base
+export MODEL_NAME=your_model_name
+
+cd baseline/FSE_ChatRepair/code/Generation
+
+python repair.py --folder Results/1.2f --lang java --dataset defects4j-1.2-function --few_shot 1 --chain_length 3 --total_tries 11 --assertion_line
+
+python repair.py --folder Results/1.2sh --lang java --dataset defects4j-1.2-single-hunk --few_shot 1 --chain_length 3 --total_tries 11 --assertion_line
+
+python repair.py --folder Results/1.2sl --lang java --dataset defects4j-1.2-single-line --few_shot 1 --chain_length 3 --total_tries 11 --assertion_line
+
+python repair.py --folder Results/2.0 --lang java --dataset defects4j-2.0-single-line --few_shot 1 --chain_length 3 --total_tries 11 --assertion_line
+```
+
+Combine 3 scenarios for D4J 1.2 to count the solved bugs:
+
+```
+python myutil/count_num_proj.py Results/1.2f
+
+python myutil/count_num_proj.py Results/1.2sh
+
+python myutil/count_num_proj.py Results/1.2sl
+
+python myutil/combine.py Results/CR_combine
+```
+
+Count the solved bugs on D4J 2.0:
+
+```
+python myutil/count_num.py Results/2.0
+```
+
+**LANTERN:**
+
+
+```
+export API_KEY=your_api_key
+export API_BASE=your_api_base
+export MODEL_NAME=your_model_name
+
+cd baseline/ChatRepair_LANTERN/code/Generation
+
+bash run12.sh
+
+bash run20.sh
+```
+
+Count the solved bugs:
+
+```
+python myutil/count_num_proj.py Results/1.2f
+
+python myutil/count_num.py Results/2.0
+
+```
+
+### Approach Comparison
+
+- **ChatRepair**
+
+```
+cd LANTERN
+
+python main.py --config config/add/tr_chatreapir.yaml
+
+```
+
+- **Self-Planning**
+
+```
+export API_KEY=your_api_key
+export API_BASE=your_api_base
+export MODEL_NAME=your_model_name
+
+cd baseline/self-planning
+
+python planning.py --base-dir <result directory> --num-proc <number of process> --dataset-path <xcodeeval_dataset>
+
+python implementation.py --base-dir <result directory> --num-proc <number of process>
+```
+
+- **Self-Collaboration**
+
+
+
+```
+export API_KEY=your_api_key
+export API_BASE=your_api_base
+export MODEL_NAME=your_model_name
+
+cd baseline/Self-collaboration-Code-Generation
+
+bash run.sh
+
+bash evaluate.sh
+```
+
+### Model Generalizability
+
+(Please set corresponding OpenAI API before running the scripts.)
+
+- **Claude 3.5 Sonnet**
+
+```
+python main.py --config config/add/tr_reasoning_claude.yaml
+```
+
+- **QWen2.5-72B-Instruct**
+
+```
+python main.py --config config/add/tr_reasoning_qwen.yaml
+```
 
 
 # LANTERN

@@ -1,0 +1,280 @@
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /tmp/trClosure71 && /root/defects4j-2.0.0/major/bin/ant -f /root/defects4j-2.0.0/framework/projects/defects4j.build.xml -Dd4j.home=/root/defects4j-2.0.0 -Dd4j.dir.projects=/root/defects4j-2.0.0/framework/projects -Dbasedir=/tmp/trClosure71 -Dbuild.compiler=javac1.7  compile.tests 2>&1
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1G; support was removed in 8.0
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-8-openjdk-amd64/lib/tools.jar
+Buildfile: /root/defects4j-2.0.0/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [mkdir] Created dir: /tmp/trClosure71/build/classes
+    [javac] /tmp/trClosure71/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 5 source files to /tmp/trClosure71/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Object.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/IOException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/InputStream.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Cloneable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/String.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/List.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Iterable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/AutoCloseable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Map.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Error.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Exception.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Throwable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/RuntimeException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/OutputStream.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/Closeable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/IllegalStateException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/CloneNotSupportedException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/NullPointerException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Collection.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Class.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Collections.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/ArrayList.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/AbstractList.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/AbstractCollection.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Iterator.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] 26 warnings
+    [javac] /tmp/trClosure71/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Warning: com/google/javascript/jscomp/CheckAccessControls.java modified in the future.
+    [javac] Compiling 365 source files to /tmp/trClosure71/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Arrays.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Object.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/String.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/IOException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Appendable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Exception.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Throwable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/Serializable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/ArrayList.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/List.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Byte.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Short.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Map.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Integer.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Enum.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Comparable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/ArrayDeque.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Deque.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/LinkedHashMap.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Map$Entry.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/nio/charset/CharsetEncoder.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/StringBuilder.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Collections.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Set.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Cloneable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/BufferedWriter.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/Closeable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/File.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/FileOutputStream.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/Flushable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/OutputStream.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/OutputStreamWriter.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/PrintStream.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/StringWriter.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/Writer.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/nio/charset/Charset.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/logging/Level.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Collection.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Comparator.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/PriorityQueue.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/HashMap.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/concurrent/Callable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/logging/Logger.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/InputStream.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/FileReader.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/InputStreamReader.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/Reader.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/StringReader.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Iterator.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Boolean.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/TreeSet.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Iterable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/NoSuchElementException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/CloneNotSupportedException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/text/MessageFormat.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/HashSet.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/ByteArrayOutputStream.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/zip/GZIPOutputStream.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/LinkedList.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/concurrent/ConcurrentHashMap.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/concurrent/ConcurrentMap.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/concurrent/CopyOnWriteArrayList.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/regex/Matcher.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/regex/Pattern.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/UnsupportedOperationException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Class.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/SortedMap.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Long.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/FilenameFilter.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/PrintWriter.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/RuntimeException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/SuppressWarnings.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Thread.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/ThreadLocal.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/RandomAccess.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/AbstractList.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/AbstractCollection.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/text/ParseException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/CharSequence.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/LinkedHashSet.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Stack.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/SortedSet.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/IdentityHashMap.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/zip/CRC32.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/BitSet.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Void.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Double.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/ResourceBundle.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/StringTokenizer.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/zip/ZipEntry.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/zip/ZipInputStream.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/Readable.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/lang/IllegalArgumentException.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Locale.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Random.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/TreeMap.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/Date.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/io/BufferedReader.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] warning: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar(java/util/AbstractSet.class): major version 52 is newer than 51, the highest major version supported by this compiler.
+    [javac]   It is recommended that the compiler be upgraded.
+    [javac] /tmp/trClosure71/src/com/google/javascript/jscomp/CheckAccessControls.java:434: error: incompatible types
+    [javac]         ObjectType ownerType = this.normalizeClassType(objectType);
+    [javac]                                                       ^
+    [javac]   required: ObjectType
+    [javac]   found:    JSType
+    [javac] 1 error
+    [javac] 100 warnings
+
+BUILD FAILED
+/tmp/trClosure71/build.xml:191: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile test suite! at /root/defects4j-2.0.0/framework/bin/d4j/d4j-test line 134.
+Compilation failed in require at /root/defects4j-2.0.0/framework/bin/defects4j line 195.

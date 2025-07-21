@@ -1,0 +1,413 @@
+Processing 78 bugs concurrently...
+Processing Cli-40.java...
+Generated patch for Cli-40.java
+Failing tests: 0
+
+So you pass the basic tests, Check if it passes all the test, include the previously passing tests
+Cli-40 has invalid patch
+Bug Cli-40.java: Valid=False - Saved to Results/2.0/Cli-40_result.json
+Error: ('', '', '')
+Processing Compress-1.java...
+Generated patch for Compress-1.java
+Error
+
+Compress-1 has invalid patch
+Bug Compress-1.java: Valid=False - Saved to Results/2.0/Compress-1_result.json
+Error: ('', '', '')
+Processing Csv-14.java...
+Generated patch for Csv-14.java
+Processing JacksonDatabind-46.java...
+Generated patch for JacksonDatabind-46.java
+Processing JacksonDatabind-97.java...
+Generated patch for JacksonDatabind-97.java
+Processing Jsoup-32.java...
+Generated patch for Jsoup-32.java
+Error
+[javac] /tmp/trJsoup32/src/test/java/org/jsoup/integration/ParseTest.java:0: error: cannot access OutputSettings
+Jsoup-32 has invalid patch
+Bug Jsoup-32.java: Valid=False - Saved to Results/2.0/Jsoup-32_result.json
+Error: ('[javac] /tmp/trJsoup32/src/test/java/org/jsoup/integration/ParseTest.java:0: error: cannot access OutputSettings', '', '')
+Processing Jsoup-40.java...
+Generated patch for Jsoup-40.java
+Error
+
+Jsoup-40 has invalid patch
+Bug Jsoup-40.java: Valid=False - Saved to Results/2.0/Jsoup-40_result.json
+Error: ('', '', '')
+Processing Jsoup-51.java...
+Generated patch for Jsoup-51.java
+Failing tests: 0
+
+So you pass the basic tests, Check if it passes all the test, include the previously passing tests
+Jsoup-51 has invalid patch
+Bug Jsoup-51.java: Valid=False - Saved to Results/2.0/Jsoup-51_result.json
+Error: ('', '', '')
+Processing Jsoup-62.java...
+Generated patch for Jsoup-62.java
+Processing Cli-28.java...
+Generated patch for Cli-28.java
+Failing tests: 0
+
+So you pass the basic tests, Check if it passes all the test, include the previously passing tests
+Cli-28 has invalid patch
+Bug Cli-28.java: Valid=False - Saved to Results/2.0/Cli-28_result.json
+Error: ('', '', '')
+Processing Compress-19.java...
+Generated patch for Compress-19.java
+Processing Gson-13.java...
+Generated patch for Gson-13.java
+Processing JacksonDatabind-57.java...
+Generated patch for JacksonDatabind-57.java
+Syntax Error
+JacksonDatabind-57 has invalid patch
+Bug JacksonDatabind-57.java: Valid=False - Saved to Results/2.0/JacksonDatabind-57_result.json
+Error: ('SyntaxError', '', '')
+Processing Jsoup-2.java...
+Generated patch for Jsoup-2.java
+Failing tests: 1
+  - org.jsoup.parser.ParserTest::handlesTextAfterData
+
+org/jsoup/parser/ParserTest handlesTextAfterData 138
+Processing Jsoup-57.java...
+Generated patch for Jsoup-57.java
+Processing Jsoup-88.java...
+Generated patch for Jsoup-88.java
+Processing Codec-18.java...
+Generated patch for Codec-18.java
+Processing Codec-3.java...
+Generated patch for Codec-3.java
+Error
+
+Codec-3 has invalid patch
+Bug Codec-3.java: Valid=False - Saved to Results/2.0/Codec-3_result.json
+Error: ('', '', '')
+Processing JacksonCore-25.java...
+Generated patch for JacksonCore-25.java
+Processing JacksonDatabind-17.java...
+Generated patch for JacksonDatabind-17.java
+Processing JacksonDatabind-96.java...
+Generated patch for JacksonDatabind-96.java
+Processing Jsoup-39.java...
+Generated patch for Jsoup-39.java
+Failing tests: 0
+
+So you pass the basic tests, Check if it passes all the test, include the previously passing tests
+Jsoup-39 has invalid patch
+Bug Jsoup-39.java: Valid=False - Saved to Results/2.0/Jsoup-39_result.json
+Error: ('', '', '')
+Processing Jsoup-61.java...
+Generated patch for Jsoup-61.java
+Error
+
+Jsoup-61 has invalid patch
+Bug Jsoup-61.java: Valid=False - Saved to Results/2.0/Jsoup-61_result.json
+Error: ('', '', '')
+Processing Cli-11.java...
+Generated patch for Cli-11.java
+Processing Codec-7.java...
+Generated patch for Codec-7.java
+Failing tests: 1
+  - org.apache.commons.codec.binary.Base64Test::testByteToStringVariations
+
+org/apache/commons/codec/binary/Base64Test testByteToStringVariations 1129
+Processing Csv-1.java...
+Generated patch for Csv-1.java
+Processing JacksonCore-26.java...
+Generated patch for JacksonCore-26.java
+Processing JacksonDatabind-27.java...
+Generated patch for JacksonDatabind-27.java
+Processing Jsoup-33.java...
+Generated patch for Jsoup-33.java
+Error
+
+Jsoup-33 has invalid patch
+Bug Jsoup-33.java: Valid=False - Saved to Results/2.0/Jsoup-33_result.json
+Error: ('', '', '')
+Processing Jsoup-45.java...
+Generated patch for Jsoup-45.java
+Processing Jsoup-77.java...
+Generated patch for Jsoup-77.java
+Failing tests: 1
+  - org.jsoup.parser.XmlTreeBuilderTest::normalizesDiscordantTags
+
+org/jsoup/parser/XmlTreeBuilderTest normalizesDiscordantTags 197
+Jsoup-77 has invalid patch
+Bug Jsoup-77.java: Valid=False - Saved to Results/2.0/Jsoup-77_result.json
+Error: ('junit.framework.AssertionFailedError: expected:<<div>', 'normalizesDiscordantTags', '        assertEquals("<div>\\n test\\n</div>\\n<p></p>", document.html());')
+Processing Closure-168.java...
+Generated patch for Closure-168.java
+Processing Compress-23.java...
+Generated patch for Compress-23.java
+Processing Gson-5.java...
+Generated patch for Gson-5.java
+Processing JacksonDatabind-99.java...
+Generated patch for JacksonDatabind-99.java
+Processing Jsoup-26.java...
+Generated patch for Jsoup-26.java
+Processing Jsoup-37.java...
+Generated patch for Jsoup-37.java
+Error
+[javac] /tmp/trJsoup37/src/main/java/org/jsoup/nodes/Element.java:0: error: cannot access Document
+Jsoup-37 has invalid patch
+Bug Jsoup-37.java: Valid=False - Saved to Results/2.0/Jsoup-37_result.json
+Error: ('[javac] /tmp/trJsoup37/src/main/java/org/jsoup/nodes/Element.java:0: error: cannot access Document', '', '')
+Processing Jsoup-43.java...
+Generated patch for Jsoup-43.java
+Processing Jsoup-55.java...
+Generated patch for Jsoup-55.java
+Error
+
+Jsoup-55 has invalid patch
+Bug Jsoup-55.java: Valid=False - Saved to Results/2.0/Jsoup-55_result.json
+Error: ('', '', '')
+Processing Jsoup-86.java...
+Generated patch for Jsoup-86.java
+Error
+
+Jsoup-86 has invalid patch
+Bug Jsoup-86.java: Valid=False - Saved to Results/2.0/Jsoup-86_result.json
+Error: ('', '', '')
+Processing Codec-17.java...
+Generated patch for Codec-17.java
+Error
+
+Codec-17 has invalid patch
+Bug Codec-17.java: Valid=False - Saved to Results/2.0/Codec-17_result.json
+Error: ('', '', '')
+Processing Codec-2.java...
+Generated patch for Codec-2.java
+Error
+
+Codec-2 has invalid patch
+Bug Codec-2.java: Valid=False - Saved to Results/2.0/Codec-2_result.json
+Error: ('', '', '')
+Processing Csv-4.java...
+Generated patch for Csv-4.java
+Processing JacksonCore-5.java...
+Generated patch for JacksonCore-5.java
+Processing JacksonDatabind-34.java...
+Generated patch for JacksonDatabind-34.java
+Error
+
+JacksonDatabind-34 has invalid patch
+Bug JacksonDatabind-34.java: Valid=False - Saved to Results/2.0/JacksonDatabind-34_result.json
+Error: ('', '', '')
+Processing JacksonDatabind-82.java...
+Generated patch for JacksonDatabind-82.java
+Processing Jsoup-46.java...
+Generated patch for Jsoup-46.java
+Processing JxPath-10.java...
+Generated patch for JxPath-10.java
+Error
+[javac] /tmp/trJxPath10/src/java/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java:46: error: cannot find symbol (class NodeSet)
+JxPath-10 has invalid patch
+Bug JxPath-10.java: Valid=False - Saved to Results/2.0/JxPath-10_result.json
+Error: ('[javac] /tmp/trJxPath10/src/java/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java:46: error: cannot find symbol (class NodeSet)', '', '')
+Processing Cli-17.java...
+Generated patch for Cli-17.java
+Processing Codec-4.java...
+Generated patch for Codec-4.java
+Error
+
+Codec-4 has invalid patch
+Bug Codec-4.java: Valid=False - Saved to Results/2.0/Codec-4_result.json
+Error: ('', '', '')
+Processing Compress-25.java...
+Generated patch for Compress-25.java
+Processing JacksonCore-11.java...
+Generated patch for JacksonCore-11.java
+Error
+
+JacksonCore-11 has invalid patch
+Bug JacksonCore-11.java: Valid=False - Saved to Results/2.0/JacksonCore-11_result.json
+Error: ('', '', '')
+Processing JacksonDatabind-16.java...
+Generated patch for JacksonDatabind-16.java
+Processing JacksonDatabind-71.java...
+Generated patch for JacksonDatabind-71.java
+Error
+
+JacksonDatabind-71 has invalid patch
+Bug JacksonDatabind-71.java: Valid=False - Saved to Results/2.0/JacksonDatabind-71_result.json
+Error: ('', '', '')
+Processing Jsoup-35.java...
+Generated patch for Jsoup-35.java
+Syntax Error
+Jsoup-35 has invalid patch
+Bug Jsoup-35.java: Valid=False - Saved to Results/2.0/Jsoup-35_result.json
+Error: ('SyntaxError', '', '')
+Processing Cli-8.java...
+Generated patch for Cli-8.java
+Processing Codec-9.java...
+Generated patch for Codec-9.java
+Processing Compress-38.java...
+Generated patch for Compress-38.java
+Processing Gson-11.java...
+Generated patch for Gson-11.java
+Error
+
+Gson-11 has invalid patch
+Bug Gson-11.java: Valid=False - Saved to Results/2.0/Gson-11_result.json
+Error: ('', '', '')
+Processing JacksonDatabind-107.java...
+Generated patch for JacksonDatabind-107.java
+Processing JacksonXml-5.java...
+Generated patch for JacksonXml-5.java
+Failing tests: 1
+  - com.fasterxml.jackson.dataformat.xml.MapperCopyTest::testCopyWith
+
+com/fasterxml/jackson/dataformat/xml/MapperCopyTest testCopyWith 82
+JacksonXml-5 has invalid patch
+Bug JacksonXml-5.java: Valid=False - Saved to Results/2.0/JacksonXml-5_result.json
+Error: ('java.lang.NullPointerException', 'testCopyWith', '        String xml2 = xmlMapperNoAnno.writeValueAsString(new Pojo282());')
+Processing Jsoup-34.java...
+Generated patch for Jsoup-34.java
+Error
+
+Jsoup-34 has invalid patch
+Bug Jsoup-34.java: Valid=False - Saved to Results/2.0/Jsoup-34_result.json
+Error: ('', '', '')
+Processing Jsoup-47.java...
+Generated patch for Jsoup-47.java
+Failing tests: 1
+  - org.jsoup.nodes.EntitiesTest::escapesGtInXmlAttributesButNotInHtml
+
+org/jsoup/nodes/EntitiesTest escapesGtInXmlAttributesButNotInHtml 102
+Jsoup-47 has invalid patch
+Bug Jsoup-47.java: Valid=False - Saved to Results/2.0/Jsoup-47_result.json
+Error: ('junit.framework.AssertionFailedError: expected:<<a title="&lt;p[>One&lt;/p>]">One</a>> but was:<<a title="&lt;p[&gt;One&lt;/p&gt;]">One</a>>', 'escapesGtInXmlAttributesButNotInHtml', '        assertEquals("<a title=\\"&lt;p>One&lt;/p>\\">One</a>", element.outerHtml());')
+Processing Jsoup-93.java...
+Generated patch for Jsoup-93.java
+Failing tests: 1
+  - org.jsoup.nodes.FormElementTest::createsFormData
+
+org/jsoup/nodes/FormElementTest createsFormData 39
+Jsoup-93 has invalid patch
+Bug Jsoup-93.java: Valid=False - Saved to Results/2.0/Jsoup-93_result.json
+Error: ('junit.framework.AssertionFailedError: expected:<6> but was:<7>', 'createsFormData', '        assertEquals(6, data.size());')
+Processing Codec-10.java...
+Generated patch for Codec-10.java
+Processing Gson-15.java...
+Generated patch for Gson-15.java
+Processing JacksonCore-8.java...
+Generated patch for JacksonCore-8.java
+Failing tests: 0
+
+So you pass the basic tests, Check if it passes all the test, include the previously passing tests
+JacksonCore-8 has invalid patch
+Bug JacksonCore-8.java: Valid=False - Saved to Results/2.0/JacksonCore-8_result.json
+Error: ('', '', '')
+Processing JacksonDatabind-37.java...
+Generated patch for JacksonDatabind-37.java
+Processing Jsoup-15.java...
+Generated patch for Jsoup-15.java
+Failing tests: 1
+  - org.jsoup.parser.ParserTest::handlesDataOnlyTags
+
+org/jsoup/parser/ParserTest handlesDataOnlyTags 163
+Jsoup-15 has invalid patch
+Bug Jsoup-15.java: Valid=False - Saved to Results/2.0/Jsoup-15_result.json
+Error: ("junit.framework.AssertionFailedError: expected:<Hello []There> but was:<Hello ['); i++; ]There>", 'handlesDataOnlyTags', '        assertEquals("Hello There", doc.text());')
+Processing Cli-25.java...
+Generated patch for Cli-25.java
+Processing Collections-26.java...
+Generated patch for Collections-26.java
+Error
+[javac] /tmp/trCollections26/src/main/java/org/apache/commons/collections4/bidimap/TreeBidiMap.java:1715: error: name clash: remove() in TreeBidiMap.ViewIterator and remove() in Iterator have the same erasure, yet neither overrides the other
+Collections-26 has invalid patch
+Bug Collections-26.java: Valid=False - Saved to Results/2.0/Collections-26_result.json
+Error: ('[javac] /tmp/trCollections26/src/main/java/org/apache/commons/collections4/bidimap/TreeBidiMap.java:1715: error: name clash: remove() in TreeBidiMap.ViewIterator and remove() in Iterator have the same erasure, yet neither overrides the other', '', '')
+Processing Csv-11.java...
+Generated patch for Csv-11.java
+Error
+
+Csv-11 has invalid patch
+Bug Csv-11.java: Valid=False - Saved to Results/2.0/Csv-11_result.json
+Error: ('', '', '')
+Processing JacksonDatabind-1.java...
+Generated patch for JacksonDatabind-1.java
+Error
+
+JacksonDatabind-1 has invalid patch
+Bug JacksonDatabind-1.java: Valid=False - Saved to Results/2.0/JacksonDatabind-1_result.json
+Error: ('', '', '')
+Processing JacksonDatabind-70.java...
+Generated patch for JacksonDatabind-70.java
+Processing Jsoup-24.java...
+Generated patch for Jsoup-24.java
+Error
+[javac] /tmp/trJsoup24/src/main/java/org/jsoup/parser/TokeniserState.java:579: error: cannot find symbol (method isScript())
+Jsoup-24 has invalid patch
+Bug Jsoup-24.java: Valid=False - Saved to Results/2.0/Jsoup-24_result.json
+Error: ('[javac] /tmp/trJsoup24/src/main/java/org/jsoup/parser/TokeniserState.java:579: error: cannot find symbol (method isScript())', '', '')
+Processing Jsoup-41.java...
+Generated patch for Jsoup-41.java
+Failing tests: 0
+
+So you pass the basic tests, Check if it passes all the test, include the previously passing tests
+Jsoup-41 has invalid patch
+Bug Jsoup-41.java: Valid=False - Saved to Results/2.0/Jsoup-41_result.json
+Error: ('', '', '')
+Processing Jsoup-54.java...
+Generated patch for Jsoup-54.java
+Error
+
+Jsoup-54 has invalid patch
+Bug Jsoup-54.java: Valid=False - Saved to Results/2.0/Jsoup-54_result.json
+Error: ('', '', '')
+Processing Jsoup-76.java...
+Generated patch for Jsoup-76.java
+Syntax Error
+Jsoup-76 has invalid patch
+Bug Jsoup-76.java: Valid=False - Saved to Results/2.0/Jsoup-76_result.json
+Error: ('SyntaxError', '', '')
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+Error occurred: list index out of range
+
+Summary:
+  Completed: 37
+  Skipped: 0
+  Failed: 41
+  Valid patches: 0
+
+Merging individual results...
+Merged 37 bug results into lm_repair.json

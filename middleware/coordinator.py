@@ -120,7 +120,7 @@ class Coordinator:
             0, 
             "eval_apr", 
             "evaluating patched code", 
-            self.__get_args("base_dir", "state.it")
+            self.__get_args("base_dir", "state.it", "repair.mode")
         ):
             self.__update_state(action="eval")
         

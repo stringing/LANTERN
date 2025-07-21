@@ -159,24 +159,51 @@ def process_prompt(dt, temperature, back_trans_dir, dry_run=0):
             export_data = {"oai_response": out, "source_data": dt}
             open(file_path, "w").write(f"{json.dumps(export_data, indent=4)}")
 
+# def sanitize_code(code):
+#     prefixes = ["csharp", "cpp", "go", "javascript", "kotlin", "php", "python", "ruby", "rust", "c", "java", "json"]
+#     FLAG = True
+#     while FLAG == True:
+#         FLAG = False
+#         if code.startswith("```"):
+#             FLAG = True
+#             code = code.replace("```", "", 1)
+#         last_index = code.rfind("```")
+#         if last_index != -1:
+#             FLAG = True
+#             code = code[:last_index] + "" + code[last_index + len("```") :]
+#         for prefix in prefixes:
+#             if code.startswith(prefix):
+#                 FLAG = True
+#                 code = code.replace(prefix, "", 1)
+#                 break
+#     return code
+
 def sanitize_code(code):
     prefixes = ["csharp", "cpp", "go", "javascript", "kotlin", "php", "python", "ruby", "rust", "c", "java", "json"]
-    FLAG = True
-    while FLAG == True:
-        FLAG = False
-        if code.startswith("```"):
-            FLAG = True
-            code = code.replace("```", "", 1)
-        last_index = code.rfind("```")
-        if last_index != -1:
-            FLAG = True
-            code = code[:last_index] + "" + code[last_index + len("```") :]
-        for prefix in prefixes:
-            if code.startswith(prefix):
-                FLAG = True
-                code = code.replace(prefix, "", 1)
-                break
-    return code
+    
+    # Find the first occurrence of ```
+    start_idx = code.find("```")
+    if start_idx == -1:
+        return code  # No code block found
+    
+    # Extract everything from the first ``` onwards
+    code_block = code[start_idx:]
+    
+    # Remove the opening ```
+    code_block = code_block[3:]
+    
+    # Check if it starts with a language prefix and remove it
+    for prefix in prefixes:
+        if code_block.startswith(prefix):
+            code_block = code_block[len(prefix):]
+            break
+    
+    # Find the closing ```
+    end_idx = code_block.find("```")
+    if end_idx != -1:
+        code_block = code_block[:end_idx]
+    
+    return code_block.strip()
 
 def load_json_files(dir):
     json_files = []
@@ -208,7 +235,7 @@ def run(base_dir, num_proc, dry_run, it, mode):
     if not os.path.exists(back_trans_dir):
         os.makedirs(back_trans_dir, exist_ok=True)
     # for chatrepair
-    if mode == 'ultimate2':
+    if mode in ['ultimate2', "testfailure"]:
         print('copying...')
         source_dir = f"{base_dir}/iter_{it}/repair"
         destination_dir = f"{base_dir}/iter_{it}/back_trans/"
