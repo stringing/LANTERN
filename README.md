@@ -18,7 +18,7 @@ Implementation Details can be referred in the document [implementation](https://
 
 Install the SWE-Bench framework for evaluation:
 
-```
+```bash
 cd baseline/SWE-bench
 pip install -e .
 ```
@@ -33,7 +33,7 @@ Unzip the compressed repository structure file in *baseline/Agentless*.
 
 Export the structure location:
 
-```
+```bash
 export PROJECT_FILE_LOC={xxx/Agentless/repo_structure/repo_structures}
 ```
 
@@ -44,7 +44,7 @@ Unzip the agentless_swebench_lite.zip in *results*.
 
 The final structures of them should be:
 
-```
+```bash
 Agentless
 ...repo_structure
 ......repo_structures
@@ -61,7 +61,7 @@ Next, please set the OpenAI configurations in Agentless/script/api_key.sh.
 
 Then run the script to repair:
 
-```
+```bash
 cd baseline/Agentless
 
 bash script/run_trans.sh
@@ -70,7 +70,7 @@ bash script/run_trans.sh
 
 Finally, get the result:
 
-```
+```bash
 python script/cmp_all.py ../SWE-bench
 ```
 
@@ -78,7 +78,7 @@ python script/cmp_all.py ../SWE-bench
 
 **ChatRepair:**
 
-```
+```bash
 export API_KEY=your_api_key
 export API_BASE=your_api_base
 export MODEL_NAME=your_model_name
@@ -96,7 +96,7 @@ python repair.py --folder Results/2.0 --lang java --dataset defects4j-2.0-single
 
 Combine 3 scenarios for D4J 1.2 to count the solved bugs:
 
-```
+```bash
 python myutil/count_num_proj.py Results/1.2f
 
 python myutil/count_num_proj.py Results/1.2sh
@@ -108,14 +108,14 @@ python myutil/combine.py Results/CR_combine
 
 Count the solved bugs on D4J 2.0:
 
-```
+```bash
 python myutil/count_num.py Results/2.0
 ```
 
 **LANTERN:**
 
 
-```
+```bash
 export API_KEY=your_api_key
 export API_BASE=your_api_base
 export MODEL_NAME=your_model_name
@@ -129,7 +129,7 @@ bash run20.sh
 
 Count the solved bugs:
 
-```
+```bash
 python myutil/count_num_proj.py Results/1.2f
 
 python myutil/count_num.py Results/2.0
@@ -140,7 +140,7 @@ python myutil/count_num.py Results/2.0
 
 - **ChatRepair**
 
-```
+```bash
 cd LANTERN
 
 python main.py --config config/add/tr_chatreapir.yaml
@@ -149,7 +149,7 @@ python main.py --config config/add/tr_chatreapir.yaml
 
 - **Self-Planning**
 
-```
+```bash
 export API_KEY=your_api_key
 export API_BASE=your_api_base
 export MODEL_NAME=your_model_name
@@ -165,7 +165,7 @@ python implementation.py --base-dir <result directory> --num-proc <number of pro
 
 
 
-```
+```bash
 export API_KEY=your_api_key
 export API_BASE=your_api_base
 export MODEL_NAME=your_model_name
@@ -183,13 +183,13 @@ bash evaluate.sh
 
 - **Claude 3.5 Sonnet**
 
-```
+```bash
 python main.py --config config/add/tr_reasoning_claude.yaml
 ```
 
 - **QWen2.5-72B-Instruct**
 
-```
+```bash
 python main.py --config config/add/tr_reasoning_qwen.yaml
 ```
 
